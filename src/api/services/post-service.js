@@ -9,6 +9,7 @@ const POST_TYPE = 'post'
 
 class PostService {
   async getItems (filter = { type: undefined, value: undefined }) {
+    
     var query = deliveryClient
       .items()
       .type(POST_TYPE)
@@ -22,6 +23,8 @@ class PostService {
         case 'activity':
           query.containsFilter('elements.activities', ensureArrayOfCodenames(filter.value))
           break
+        case 'language':
+          query.languageParameter(filter.value).equalsFilter("system.language", filter.value);
       }
     }
 

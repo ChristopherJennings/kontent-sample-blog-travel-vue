@@ -18,9 +18,10 @@ export default new Router({
   },
   routes: [
     {
-      path: '/',
+      path: '/:locale?',
       name: 'home',
-      component: Home
+      component: Home,
+      props: true
     },
     {
       path: '/blog/:year/:month/:date/:slug',

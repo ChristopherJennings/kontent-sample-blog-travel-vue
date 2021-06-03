@@ -23,6 +23,12 @@ export default {
     PostList,
     TheHeaderHome
   },
+  props: {
+    locale: {
+      type: String,
+      default: "default"
+    }
+  },
   data: function () {
     return {
       posts: []
@@ -37,7 +43,7 @@ export default {
   },
   methods: {
     loadPage: function () {
-      postService.getItems().then(posts => {
+      postService.getItems({ type: "language", value: this.locale}).then(posts => {
         this.posts = posts
       })
     }
