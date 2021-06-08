@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@kentico/kontent-delivery": "^7.0.1",
+    "algoliasearch": "^4.9.1",
     "rxjs": "^6.3.3",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"

@@ -5,13 +5,6 @@
   >
     <div class="inner">
       <nav id="navigation">
-        <span
-          v-if="!isHome"
-          id="home-button"
-          class="nav-button"
-        >
-          <router-link to="/" class="home-button" title="Home"><i class="ic ic-arrow-left"></i> Home</router-link>
-        </span>
         <button-menu />
       </nav>
       <slot/>

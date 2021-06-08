@@ -36,6 +36,7 @@ export function flatten (item) {
   return {
     id: item.system.id,
     codename: item.system.codename,
+    language: item.system.language,
     title: item.frontMatterTitle.value,
     featureImageUrl,
     slug: item.slug.value,
@@ -43,6 +44,6 @@ export function flatten (item) {
     published: item.published.value,
     authors: item.authors.value.map(flattenAuthor),
     activities: item.activities.value.map(flattenTaxonomyTerm),
-    body: item.body.resolveHtml()
+    body: item.body.resolveHtml(),
   }
 }
